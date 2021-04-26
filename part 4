@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    char ch[40],rev[40];
+    int i,j,cnt=0;
+    printf("Enter string ");
+    gets(ch);
+    while(ch[cnt]!='\0')
+    {
+        cnt++;
+    }
+    printf("\nLength of the string is %d ",cnt);
+    j=cnt-1;
+    for(i=0;i<cnt;i++)
+    {
+        rev[i]=ch[j];
+        j--;
+    }
+    rev[i]='\0';
+    printf("\nRevrse is %s \n",rev);
+}
