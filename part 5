@@ -1,0 +1,38 @@
+#include<stdio.h>
+void conc(char a[],char b[],char c[])
+{
+    int i=0,j=0,k=0;
+    while(c[i]!='\0')
+    {
+        i++;
+    }
+    c[i]=' ';
+    i++;
+    while(b[j]!='\0')
+    {
+        c[i]=b[j];
+        i++;
+        j++;
+    }
+    c[i]=' ';
+    i++;
+    while(a[k]!='\0')
+    {
+        c[i]=a[k];
+        i++;
+        k++;
+    }
+    c[i]='\0';
+}
+int main()
+{
+    char p[20],q[20],r[20];
+    printf("Enter string 1 ");
+    gets(p);
+    printf("Enter string 2 ");
+    gets(q);
+    printf("Enter string 3 ");
+    gets(r);
+    conc(p,q,r);
+    printf("\nFinal string is %s \n",r);
+}
